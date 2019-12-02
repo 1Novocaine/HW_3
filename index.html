@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 test page</title>
+   <style type="text/css">
+   .page {
+   	width: 550px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    }
+   </style>
+</head>
+<body>
+  <div id=tip class="page">
+    <header>
+      <h1>HTML5 Test Page</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#text">text</a>
+          <ul>
+            <li><a href="#text_headings">headings</a></li>
+            <li><a href="#text_paragraphs">Paragraphs</a></li>
+            <li><a href="#text_blockquotes">blockquotes</a></li>
+            <li><a href="#text_lists">Lists</a></li>
+            <li><a href="text_tables">Tabular data</a></li>
+            <li><a href="#text_comments">HTML Comments</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#embedded">Embedded content</a>
+          <ul>
+            <li><a href="#embedded_images">images</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#forms">Form elemets</a>
+          <ul>
+            <li><a href="#forms_input">Inpud fields</a></li>
+            <li><a href="#forms_select">Select menus</a></li>
+            <li><a href="#forms_checkbox">Checkboxes</a></li>
+            <li><a href="#forms_radio">Radio buttons</a></li>
+            <li><a href="#forms_textareas">Textareas</a></li>
+            <li><a href="#forms_action">Action buttons</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section id="text">
+        <header><h1>Text</h1></header>
+        <article id="text_headings">
+          <div>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+          </div>
+        </article>
+        <article id="text_paragraphs">
+          <div>
+            <p>A paragraph</p>
+          </div>
+        </article>
+        <article id="text_blockquotes">
+          <div>
+            <blockquote>
+              <p>A block quotation</p>
+            </blockquote>
+          </div>
+        </article>
+        <article id="text_lists">
+          <header><h1>Lists</h1></header>
+          <div>
+            <h3>Definition list</h3>
+            <dl>
+              <dt>Definition List Title</dt>
+              <dd>This is a definition list division</dd>
+            </dl>
+            <h3>Ordered List</h3>
+            <ol>
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ol>
+            <h3>Unordered List</h3>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ul>
+          </div>
+        </article>
+        <article id="text_tables">
+          <header><h1>Tabular data</h1></header>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Table Heading 1</th>
+                <th>Table Heading 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+              </tr>
+              <tr>
+                <td>Table Cell 1</td>
+                <td>Table Cell 2</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article id="text_comments">
+        	<header><h1>HTML Comments</h1></header>
+          <div>
+            <p>Comment here:<!--This should not be displayed--></p>
+            <!--<p>Not displayed element</p>-->
+          </div>
+        </article>
+      </section>
+      <section id="embedded">
+        <header><h1>Embedded content</h1></header>
+        <article id="embedded_images">
+          <header><h2>Images</h2></header>
+          <div class="images">
+           <figure><p><img src="images/480.jpg" alt="Image alt text"></p></figure> 
+            <figure>
+              <p><img src="images/420.jpg" alt="Image alt text"></p>
+              <figcaption>Here is a caption for this image</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+      <section id="forms">
+        <form>
+          <fieldset id="forms_input">
+            <legend>Input fields</legend>
+            <p>
+              <label for="input_text">Text Input</label>
+              <input id="input_text" type="text" placeholder="text input">
+            </p>
+            <p>
+              <label for="input_password">Password</label>
+              <input id="input_password" type="password" placeholder="Type your password">
+            </p>
+            <p>
+              <label for="input_text2">Number Input</label>
+              <input id="input_text2" type="text" placeholder="Enter a number">
+            </p>
+            <p>
+              <label for="idd">Date input</label>
+              <input id="idd" type="date" value="1970-01-01">
+            </p>
+          </fieldset>
+          <fieldset id="forms_select">
+            <legend>Select menus</legend>
+            <p>
+              <label for="select">Select</label>
+              <select id="select">
+                <optgroup label="Option Group">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                </optgroup>
+              </select>
+            </p>
+          </fieldset>
+          <fieldset id="forms_checkbox">
+            <legend>Checkboxes</legend>
+            <ul class="list list--bare">
+              <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked">Choise A</label></li>
+              <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox">Choise B</label></li>
+            </ul>
+          </fieldset>
+          <fieldset id="forms_radio">
+            <legend>Radio buttons</legend>
+            <ul class="list list--bare">
+              <li><label for="radio1"><input id="radio1" name="radio" type="radio" class="radio" checked="checked">Option 1</label></li>
+              <li><label for="radio1"><input id="radio2" name="radio" type="radio" class="radio">Option 2</label></li>
+            </ul>
+          </fieldset>
+          <fieldset id="forms_textareas">
+            <legend>Textareas</legend>
+            <p>
+              <label for="textarea">Textarea</label>
+              <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message"></textarea>
+            </p>
+          </fieldset>
+          <fieldset id="forms_action">
+            <legend>Action buttons</legend>
+            <p>
+              <input type="submit" value="submit">
+              <input type="button" value="button">
+              <input type="submit" value="disabled" disabled>
+            </p>
+            <p>
+              <button type="submit">submit</button>
+              <button type="button">button</button>
+              <button type="button" disabled>disabled</button>
+            </p>
+          </fieldset>
+          <p><a href="#top">[Top]</a></p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p><a href="http://twitter.com">Twitter</a>.</p>
+    </footer>
+  </div>
+</body>
+</html>
